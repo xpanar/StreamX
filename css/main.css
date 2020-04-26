@@ -194,13 +194,13 @@ h1 {
     right: 40px;
     width: 30px;
     height: 30px;
-    background: url("/images/menu.png");
+    background: url("../images/menu.png");
     background-size: 30px;
     background-repeat: no-repeat;
     z-index: 1000;
   }
   .menuicon.active {
-    background: url("/images/close.png");
+    background: url("../images/close.png");
     background-size: 30px;
     background-repeat: no-repeat;
     z-index: 1000;
