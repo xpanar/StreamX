@@ -1,0 +1,242 @@
+body {
+  font-family: 'Josefin Sans', sans-serif;
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+
+h1 {
+  position: relative;
+}
+
+#fp-nav ul {
+  display: block;
+  list-style-type: disc;
+  -webkit-margin-before: 1em;
+          margin-block-start: 1em;
+  -webkit-margin-after: 1em;
+          margin-block-end: 1em;
+  -webkit-margin-start: 0px;
+          margin-inline-start: 0px;
+  -webkit-margin-end: 0px;
+          margin-inline-end: 0px;
+  -webkit-padding-start: 40px;
+          padding-inline-start: 40px;
+}
+
+#logo {
+  position: fixed;
+  padding-left: 30px;
+  text-align: center,left;
+  line-height: 70px;
+  color: #2299ff;
+  font-weight: 700;
+  z-index: 99;
+  font-size: 2em;
+}
+
+.menu {
+  position: fixed;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  top: 0px;
+  right: 20px;
+  z-index: 99;
+  letter-spacing: 1px;
+  font-size: 1.1em;
+}
+
+.menu li {
+  position: relative;
+  list-style: none;
+}
+
+.menu ol, ul {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.menu li a {
+  position: relative;
+  display: inline-block;
+  width: 150px;
+  height: 40px;
+  text-align: center;
+  line-height: 40px;
+  margin: 10px;
+  text-transform: uppercase;
+  background: #fff;
+  color: #2c84e7;
+  font-size: 18px;
+  font-weight: 500;
+  text-decoration: none;
+  letter-spacing: 2px;
+  overflow: hidden;
+}
+
+.menu li a span {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 100%;
+  z-index: 100000;
+  -webkit-transition: 0s ease-in;
+  transition: 0s ease-in;
+}
+
+.menu li a:hover span {
+  -webkit-transition: 0.4s ease-in;
+  transition: 0.4s ease-in;
+  -webkit-transform: translateY(-100%);
+          transform: translateY(-100%);
+}
+
+.menu li a:before {
+  content: '';
+  position: absolute;
+  bottom: -250px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  width: 250px;
+  height: 250px;
+  background: #2299ff;
+  border-radius: 50%;
+  -webkit-transition: 0.4s ease-in;
+  transition: 0.4s ease-in;
+}
+
+.menu li a:hover:before {
+  bottom: -150px;
+}
+
+.menu li a:hover {
+  color: #fff;
+}
+
+h1 {
+  text-align: center;
+  font-size: larger;
+}
+
+.art {
+  position: absolute;
+  top: 80px;
+  right: 2cm;
+  border: 3px solid #73AD21;
+  background-color: rgba(255, 255, 255, 0.3);
+  border-radius: 5px;
+  font-family: sans-serif;
+  text-align: center;
+  line-height: 1;
+  -webkit-backdrop-filter: blur(5px);
+  backdrop-filter: blur(5px);
+  max-width: 50%;
+  max-height: 50%;
+}
+
+#vector {
+  position: absolute;
+  height: 55%;
+  width: 55%;
+  bottom: 20px;
+  right: 50px;
+}
+
+.s2 #art-dslr {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+.s3 #art-mobile {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+.s1 {
+  background-image: url("../images/background.jpg");
+  background-position: center;
+  background-size: cover;
+}
+
+.s2 {
+  background-image: url("../images/background.jpg");
+  background-position: center;
+  background-size: cover;
+}
+
+.s3 {
+  background-image: url("../images/background.jpg");
+  background-position: center;
+  background-size: cover;
+}
+
+@media (max-width: 900px) {
+  .menuicon {
+    position: fixed;
+    top: 40px;
+    right: 40px;
+    width: 30px;
+    height: 30px;
+    background: url("/images/menu.png");
+    background-size: 30px;
+    background-repeat: no-repeat;
+    z-index: 1000;
+  }
+  .menuicon.active {
+    background: url("/images/close.png");
+    background-size: 30px;
+    background-repeat: no-repeat;
+    z-index: 1000;
+  }
+  .menu {
+    position: fixed;
+    top: 0;
+    left: -150%;
+    width: 100%;
+    height: 100%;
+    background: #fff;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    z-index: 11;
+    border: none;
+    padding: 50px;
+  }
+  .menu.active {
+    left: 0;
+  }
+  .nav li {
+    margin: 5px 0;
+  }
+  div {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+/*# sourceMappingURL=main.css.map */
